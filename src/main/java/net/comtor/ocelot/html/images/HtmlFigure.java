@@ -1,0 +1,16 @@
+package net.comtor.ocelot.html.images;
+
+import net.comtor.ocelot.html.HtmlDoubleTag;
+
+/**
+ *
+ * @author Guido A. Cafiel Vellojin
+ */
+public class HtmlFigure extends HtmlDoubleTag {
+
+    
+    public HtmlFigure() {
+        super("figure");
+    }
+
+}
