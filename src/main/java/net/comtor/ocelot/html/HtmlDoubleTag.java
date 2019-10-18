@@ -66,10 +66,6 @@ public class HtmlDoubleTag extends HtmlTag implements IHtmlContainer {
         return container.getElementById(id);
     }
 
-    @Override
-    public HtmlObject getElementByName(String name) {
-        return container.getElementByName(name);
-    }
 
     public HtmlObject addEscapedData(String text) {
         if (text != null) {

@@ -87,36 +87,6 @@ public class HtmlContainer implements IHtmlContainer {
 
     }
 
-    @Override
-    public HtmlObject getElementByName(String name) {
-
-        for (HtmlObject cc : children) {
-            if (cc instanceof IHtmlTag) {
-                IHtmlTag child = (IHtmlTag) cc;
-
-                if (child.getAttributes().containsKey("name") && child.getName().equals(name)) {
-                    return child;
-                }
-            }
-            if (cc instanceof IHtmlContainer) {
-                IHtmlContainer child = (IHtmlContainer) cc;
-
-                HtmlObject resp = child.getElementByName(name);
-                if (resp != null) {
-                    return resp;
-                }
-//
-//                if (!child.getContenObjects().isEmpty()) {
-//                    HtmlObject target = child.getElementByName(name);
-//                    if (target != null) {
-//                        return target;
-//                    }
-//                }
-            }
-        }
-        return null;
-
-    }
 
     @Override
     public IHtmlContainer addFirst(HtmlObject htmlObject) {

@@ -35,33 +35,6 @@ public class HtmlContainerWithMainTag extends HtmlContainer implements IHtmlTag 
         return containerMainTag.getAttribute(name);
     }
 
-//    @Override
-//    public IHtmlTag addTag(IHtmlTag htmlObjec) {
-//        if
-//        containerMainTag.add(htmlObjec);
-//        return this;
-//    }
-//
-//    @Override
-//    public IHtmlTag addTags(IHtmlTag... HtmlObjects) {
-//        for (IHtmlTag obj : HtmlObjects) {
-//            containerMainTag.addTag(obj);
-//        }
-//        return this;
-//
-//    }
-//
-//    @Override
-//    public IHtmlTag addTagList(List<IHtmlTag> HtmlObjects) {
-//        containerMainTag.addTagList(HtmlObjects);
-//        return this;
-//    }
-//
-//    @Override
-//    public HtmlObject addData(String text) {
-//        return containerMainTag.addData(text);
-//    }
-
     @Override
     public IHtmlTag removeAttribute(String key) {
         containerMainTag.removeAttribute(key);
@@ -207,14 +180,6 @@ public class HtmlContainerWithMainTag extends HtmlContainer implements IHtmlTag 
                  return this;
     }
 
-//    
-//
-//    @Override
-//    public IHtmlTag addTagFirst(IHtmlTag tag) {
-//    this.containerMainTag.addTagFirst(tag);
-//    return this;
-//    }
-//
     @Override
     public String getName() {
         return this.containerMainTag.getName();

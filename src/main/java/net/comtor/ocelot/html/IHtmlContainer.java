@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- *
+ * 
  * @author juriel
  */
 public interface IHtmlContainer extends HtmlObject{
@@ -15,7 +15,6 @@ public interface IHtmlContainer extends HtmlObject{
 
     public HtmlObject getElementById(String id);
 
-    public HtmlObject getElementByName(String name);
 
     public IHtmlContainer add(HtmlObject child);
 
