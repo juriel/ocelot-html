@@ -21,7 +21,7 @@ public class HtmlTextContainer extends HtmlDoubleTag implements IHtmlTextContain
     }
 
     @Override
-    public void setText(String text) {
+    final public void setText(String text) {
         this.text = text;
         removeAll();
         add(new HtmlDataWrapper(text));

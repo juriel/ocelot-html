@@ -1,8 +1,6 @@
 package net.comtor.ocelot.html.forms.inputs;
 
 import net.comtor.ocelot.html.HtmlSingleTag;
-import net.comtor.ocelot.html.forms.HtmlOption;
-import net.comtor.ocelot.html.forms.HtmlSelect;
 import net.comtor.ocelot.html.forms.HtmlFormElement;
 
 /**
@@ -95,18 +93,14 @@ public class HtmlInput extends HtmlSingleTag implements HtmlFormElement {
     }
 
     @Override
-    public HtmlSelect addOption(String value, String label) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public HtmlFormElement setName(String name) {
+        addAttribute("name", name);
+        return this;
     }
 
     @Override
-    public HtmlSelect addOption(String value, String label, boolean selected) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public HtmlSelect addOption(HtmlOption optionTag) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String getName() {
+        return getAttribute("name");
     }
 
 }

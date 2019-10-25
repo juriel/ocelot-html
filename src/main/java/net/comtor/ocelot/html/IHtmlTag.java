@@ -1,18 +1,15 @@
 package net.comtor.ocelot.html;
 
-import java.util.HashMap;
-
 /**
  *
  * @author juriel
  */
 public interface IHtmlTag extends HtmlObject {
 
-    public HashMap<String, String> getAttributes();
 
     public IHtmlTag addAttribute(String name, String value);
 
-    public String getAttribute(String name);
+    public String   getAttribute(String name);
 
     public IHtmlTag removeAttribute(String key);
 
@@ -24,13 +21,9 @@ public interface IHtmlTag extends HtmlObject {
 
     public IHtmlTag setStyle(String style);
 
-    public IHtmlTag setName(String name);
-
-    public String getName();
-
     public IHtmlTag setId(String id);
 
-    public String getId();
+    public String   getId();
 
     public IHtmlTag setAccessKey(String accessKey);
 

@@ -15,12 +15,12 @@ public class HtmlContainer implements IHtmlContainer {
         children = new LinkedList<>();
     }
 
-    public IHtmlContainer add(HtmlObject child) {
+    final public IHtmlContainer add(HtmlObject child) {
         children.add(child);
         return this;
     }
 
-    public IHtmlContainer addAll(HtmlObject... children) {
+    final public IHtmlContainer addAll(HtmlObject... children) {
         for (HtmlObject htmlObject : children) {
             add(htmlObject);
         }
@@ -63,7 +63,7 @@ public class HtmlContainer implements IHtmlContainer {
         for (HtmlObject cc : children) {
             if (cc instanceof IHtmlTag) {
                 IHtmlTag child = (IHtmlTag) cc;
-                if (child.getAttributes().containsKey("id") && child.getId().equals(id)) {
+                if (child.getId() != null && child.getId().equals(id)) {
                     return child;
                 }
             }

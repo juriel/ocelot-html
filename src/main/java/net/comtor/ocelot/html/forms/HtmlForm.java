@@ -15,8 +15,8 @@ public class HtmlForm extends HtmlDoubleTag {
 
     public HtmlForm(String name) {
         this();
-        setName(name);
-        
+        addAttribute("name", name);
+       
     }
 
 

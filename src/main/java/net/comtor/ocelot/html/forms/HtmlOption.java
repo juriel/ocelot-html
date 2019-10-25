@@ -5,18 +5,17 @@ import net.comtor.ocelot.html.utils.HtmlTextContainer;
 /**
  *
  * @author Guido A. Cafiel Vellojin
+ * @author juriel@comtor.net
  */
 public class HtmlOption extends HtmlTextContainer {
 
     public HtmlOption() {
         super("option");
-
     }
 
     public HtmlOption(String value, String label) {
         this();
         addAttribute("value", value);
-
         setText(label);
     }
 

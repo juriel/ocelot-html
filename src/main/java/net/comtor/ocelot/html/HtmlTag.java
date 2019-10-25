@@ -11,8 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 public abstract class HtmlTag implements IHtmlTag {
 
     private String tagName;
-    protected HashMap<String, String> attributes;
-    protected String tagClass;
+    private HashMap<String, String> attributes;
+    private String tagClass;
     private boolean singleTag;
 
     public HtmlTag(String tagName, boolean singleTag) {
@@ -37,7 +37,7 @@ public abstract class HtmlTag implements IHtmlTag {
     }
 
     @Override
-    public IHtmlTag addAttribute(String name, String value) {
+    final public IHtmlTag addAttribute(String name, String value) {
         attributes.put(name, value);
         return this;
     }
@@ -84,19 +84,6 @@ public abstract class HtmlTag implements IHtmlTag {
     public IHtmlTag setStyle(String style) {
         attributes.put("style", style);
         return this;
-    }
-
-    @Override
-
-    final public IHtmlTag setName(String name) {
-        attributes.put("name", name);
-        return this;
-    }
-
-    @Override
-
-    final public String getName() {
-        return this.attributes.get("name");
     }
 
     @Override
@@ -214,8 +201,7 @@ public abstract class HtmlTag implements IHtmlTag {
     }
 
     /**
-     * Sobre escribir este método para modificar el objeto antes de hacer el
-     * render a html
+     * Sobre escribir este método para modificar el objeto antes de hacer el render a html
      */
     protected void preHtmlRender() {
 
@@ -248,11 +234,6 @@ public abstract class HtmlTag implements IHtmlTag {
 
     protected StringBuilder getContainerHtml() {
         return new StringBuilder();
-    }
-
-    @Override
-    public HashMap<String, String> getAttributes() {
-        return this.attributes;
     }
 
 }

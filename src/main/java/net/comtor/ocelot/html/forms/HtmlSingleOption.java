@@ -8,16 +8,15 @@ import net.comtor.ocelot.html.HtmlSingleTag;
  */
 public class HtmlSingleOption extends HtmlSingleTag {
 
-    public HtmlSingleOption(){
+    public HtmlSingleOption() {
         super("option");
     }
-    
-    //private String value;
 
+    //private String value;
     public HtmlSingleOption(String value) {
         this();
         addAttribute("value", value);
-        
+
     }
 
     public String getValue() {
@@ -27,7 +26,5 @@ public class HtmlSingleOption extends HtmlSingleTag {
     public void setValue(String value) {
         addAttribute("value", value);
     }
-
-  
 
 }

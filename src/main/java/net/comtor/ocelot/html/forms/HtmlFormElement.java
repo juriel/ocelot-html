@@ -8,6 +8,10 @@ import net.comtor.ocelot.html.IHtmlTag;
  */
 public interface HtmlFormElement extends IHtmlTag {
 
+    public HtmlFormElement setName(String name);
+
+    public String getName();
+
     public HtmlFormElement setValue(String value);
 
     public String getValue();
@@ -24,9 +28,4 @@ public interface HtmlFormElement extends IHtmlTag {
 
     public HtmlFormElement removeReadOnly();
 
-    public HtmlSelect addOption(String value, String label);
-
-    public HtmlSelect addOption(String value, String label, boolean selected);
-
-    public HtmlSelect addOption(HtmlOption optionTag);
 }

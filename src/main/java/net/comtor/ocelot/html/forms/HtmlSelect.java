@@ -10,8 +10,6 @@ import net.comtor.ocelot.html.HtmlObject;
  */
 public class HtmlSelect extends HtmlDoubleTag implements HtmlFormElement {
 
-//    private String name;
-//    private List<HtmlOption> optionsList;
     public HtmlSelect() {
         super("select");
 
@@ -116,6 +114,17 @@ public class HtmlSelect extends HtmlDoubleTag implements HtmlFormElement {
     public HtmlFormElement removeReadOnly() {
         removeAttribute("readonly");
         return this;
+    }
+
+    @Override
+    public HtmlFormElement setName(String name) {
+        addAttribute("name", name);
+        return this;
+    }
+
+    @Override
+    public String getName() {
+        return getAttribute("name");
     }
 
 }

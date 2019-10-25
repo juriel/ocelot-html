@@ -7,10 +7,11 @@ import org.apache.commons.lang3.StringUtils;
 /**
  *
  * @author Guido A. Cafiel Vellojin
+ * @author juriel@comtor.net
  */
 public class HtmlDoubleTag extends HtmlTag implements IHtmlContainer {
 
-    HtmlContainer container;
+    private HtmlContainer container;
 
     public HtmlDoubleTag(String tagName) {
         super(tagName, false);
@@ -65,7 +66,6 @@ public class HtmlDoubleTag extends HtmlTag implements IHtmlContainer {
     public HtmlObject getElementById(String id) {
         return container.getElementById(id);
     }
-
 
     public HtmlObject addEscapedData(String text) {
         if (text != null) {

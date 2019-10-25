@@ -1,12 +1,12 @@
 package net.comtor.ocelot.html.forms;
 
-import net.comtor.ocelot.html.HtmlDoubleTag;
+import net.comtor.ocelot.html.utils.HtmlTextContainer;
 
 /**
  *
  * @author Guido A. Cafiel Vellojin
  */
-public class HtmlTextarea extends HtmlDoubleTag implements HtmlFormElement {
+public class HtmlTextarea extends HtmlTextContainer implements HtmlFormElement {
 
     public HtmlTextarea() {
         super("textarea");
@@ -16,8 +16,6 @@ public class HtmlTextarea extends HtmlDoubleTag implements HtmlFormElement {
         addData(value);
         return this;
     }
-
-    
 
     @Override
     public String getValue() {
@@ -61,18 +59,15 @@ public class HtmlTextarea extends HtmlDoubleTag implements HtmlFormElement {
     }
 
     @Override
-    public HtmlSelect addOption(String value, String label) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public HtmlFormElement setName(String name) {
+        addAttribute("name", name);
+        return this;
     }
 
     @Override
-    public HtmlSelect addOption(String value, String label, boolean selected) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String getName() {
+        return getAttribute("name");
     }
 
-    @Override
-    public HtmlSelect addOption(HtmlOption optionTag) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 
 }
