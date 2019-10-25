@@ -1,7 +1,7 @@
 package net.comtor.ocelot.html.links;
 
 import java.util.Arrays;
-import net.comtor.ocelot.html.HtmlDataWrapper;
+import net.comtor.ocelot.html.HtmlEscapedText;
 import net.comtor.ocelot.html.HtmlDoubleTag;
 
 /**
@@ -34,7 +34,7 @@ public class HtmlUl extends HtmlDoubleTag {
 
     public HtmlUl addLis(String... text) {
         Arrays.asList(text).forEach((li) -> {
-            add(new HtmlDataWrapper(li));
+            add(new HtmlEscapedText(li));
         });
 
         return this;

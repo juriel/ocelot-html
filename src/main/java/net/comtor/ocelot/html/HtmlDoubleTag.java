@@ -2,7 +2,6 @@ package net.comtor.ocelot.html;
 
 import java.util.LinkedList;
 import java.util.List;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  *
@@ -25,7 +24,7 @@ public class HtmlDoubleTag extends HtmlTag implements IHtmlContainer {
 
     public HtmlDoubleTag(String tagName, String text) {
         this(tagName);
-        add(new HtmlDataWrapper(text));
+        add(new HtmlEscapedText(text));
     }
 
     @Override
@@ -67,20 +66,14 @@ public class HtmlDoubleTag extends HtmlTag implements IHtmlContainer {
         return container.getElementById(id);
     }
 
-    public HtmlObject addEscapedData(String text) {
-        if (text != null) {
-            text = StringUtils.replace(text, "&", "&amp;");
-            text = StringUtils.replace(text, "<", "&lt;");
-            text = StringUtils.replace(text, ">", "&gt;");
-            text = StringUtils.replace(text, "\"", "&quot;");
-            text = StringUtils.replace(text, "'", "&#39;");
-            container.add(new HtmlDataWrapper(text));
-        }
+    final public HtmlObject addEscapedText(String text) {
+
+        container.add(new HtmlEscapedText(text));
         return this;
     }
 
-    public HtmlDoubleTag addData(String text) {
-        container.add(new HtmlDataWrapper(text));
+    final public HtmlDoubleTag addRawText(String text) {
+        container.add(new HtmlRawText(text));
         return this;
     }
 

@@ -24,12 +24,12 @@ public abstract class HtmlButton extends HtmlDoubleTag {
         setType(type);
     }
 
-    public HtmlObject setValue(String value) {
-        addData(value);
+    final public HtmlObject setValue(String value) {
+        addEscapedText(value);
         return this;
     }
 
-    public HtmlObject setType(String type) {
+    final public HtmlObject setType(String type) {
         addAttribute("type", type);
         return this;
     }

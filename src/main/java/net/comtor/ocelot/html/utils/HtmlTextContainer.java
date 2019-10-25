@@ -1,6 +1,6 @@
 package net.comtor.ocelot.html.utils;
 
-import net.comtor.ocelot.html.HtmlDataWrapper;
+import net.comtor.ocelot.html.HtmlEscapedText;
 import net.comtor.ocelot.html.HtmlDoubleTag;
 
 /**
@@ -24,7 +24,7 @@ public class HtmlTextContainer extends HtmlDoubleTag implements IHtmlTextContain
     final public void setText(String text) {
         this.text = text;
         removeAll();
-        add(new HtmlDataWrapper(text));
+        add(new HtmlEscapedText(text));
     }
 
     @Override

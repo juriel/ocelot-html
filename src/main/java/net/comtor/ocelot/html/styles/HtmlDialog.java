@@ -15,7 +15,7 @@ public class HtmlDialog extends HtmlDoubleTag {
 
     public HtmlDialog(String text) {
         super("dialog");
-        addData(text);
+        addEscapedText(text);
     }
 
 

@@ -15,7 +15,7 @@ public class HtmlTh extends HtmlDoubleTag {
 
     public HtmlTh(String text) {
         this();
-        addData(text);
+        addEscapedText(text);
     }
 
     public HtmlTh(HtmlObject object) {

@@ -18,7 +18,7 @@ public class HtmlData extends HtmlDoubleTag {
     public HtmlData(String value, String label) {
         this();
         this.addAttribute("value", value);
-        addData(label);
+        addEscapedText(label);
     }
 
 

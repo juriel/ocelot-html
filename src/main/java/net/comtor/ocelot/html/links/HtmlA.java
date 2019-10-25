@@ -15,12 +15,12 @@ public class HtmlA extends HtmlDoubleTag {
     public HtmlA(String href, String label) {
         this();
         addAttribute("href", href);
-        addData(label);
+        addEscapedText(label);
     }
 
     public HtmlA(String label) {
         this();
-        addData(label);
+        addEscapedText(label);
     }
 
 }

@@ -14,13 +14,13 @@ public class HtmlFieldset extends HtmlDoubleTag {
     public HtmlFieldset(String text) {
         super("fieldset");
         legend = new HtmlLegend();
-        legend.addData(text);
+        legend.addEscapedText(text);
     }
     
     
     public HtmlFieldset setText(String text){
         legend.removeAll();
-        legend.addData(text);
+        legend.addEscapedText(text);
         return this;
     }
     

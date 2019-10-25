@@ -13,7 +13,7 @@ public class HtmlTextarea extends HtmlTextContainer implements HtmlFormElement {
     }
 
     public HtmlTextarea setValue(String value) {
-        addData(value);
+        addEscapedText(value);
         return this;
     }
 

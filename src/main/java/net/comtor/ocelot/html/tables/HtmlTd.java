@@ -1,6 +1,6 @@
 package net.comtor.ocelot.html.tables;
 
-import net.comtor.ocelot.html.HtmlDataWrapper;
+import net.comtor.ocelot.html.HtmlEscapedText;
 import net.comtor.ocelot.html.HtmlDoubleTag;
 import net.comtor.ocelot.html.HtmlObject;
 
@@ -17,7 +17,7 @@ public class HtmlTd extends HtmlDoubleTag {
 
     public HtmlTd(String text) {
         this();
-        add(new HtmlDataWrapper(text));
+        add(new HtmlEscapedText(text));
     }
 
     public HtmlTd(HtmlObject object) {

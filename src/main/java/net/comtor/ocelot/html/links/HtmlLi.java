@@ -15,7 +15,7 @@ public class HtmlLi extends HtmlDoubleTag {
 
     public HtmlLi(String text) {
         this();
-        addData(text);
+        addEscapedText(text);
         
     }
 
