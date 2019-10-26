@@ -60,7 +60,6 @@ public class HtmlSelect extends HtmlDoubleTag implements HtmlFormElement {
                     option.selected();
                 }
             }
-
         }
         return this;
     }

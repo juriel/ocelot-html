@@ -5,11 +5,17 @@ import net.comtor.ocelot.html.utils.HtmlTextContainer;
 /**
  *
  * @author Guido A. Cafiel Vellojin
+ * @author juriel
  */
 public class HtmlTextarea extends HtmlTextContainer implements HtmlFormElement {
 
     public HtmlTextarea() {
         super("textarea");
+    }
+    
+    public HtmlTextarea(String name) {
+        super("textarea");
+        addAttribute("name", name);
     }
 
     public HtmlTextarea setValue(String value) {

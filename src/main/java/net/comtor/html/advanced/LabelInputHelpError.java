@@ -9,9 +9,9 @@ import net.comtor.ocelot.html.forms.HtmlFormElement;
  *
  * @author juriel
  */
-public interface LabelInputHelpError extends HtmlFormElement {
+public interface LabelInputHelpError<INPUT extends HtmlFormElement> extends HtmlFormElement {
 
-    HtmlFormElement getInput();
+    INPUT getInput();
 
     public void setLabel(String label);
 
