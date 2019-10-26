@@ -11,18 +11,21 @@ public class HtmlFieldset extends HtmlDoubleTag {
 
     HtmlLegend legend;
 
-    public HtmlFieldset(String text) {
+    public HtmlFieldset() {
         super("fieldset");
         legend = new HtmlLegend();
-        legend.addEscapedText(text);
+        add(legend);
     }
-    
-    
-    public HtmlFieldset setText(String text){
+
+    public HtmlFieldset(String text) {
+       this();
+       legend.setText(text);
+    }
+
+    final public HtmlFieldset setText(String text) {
         legend.removeAll();
         legend.addEscapedText(text);
         return this;
     }
-    
 
 }

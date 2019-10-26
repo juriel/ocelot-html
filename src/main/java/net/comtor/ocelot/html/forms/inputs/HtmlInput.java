@@ -41,6 +41,11 @@ public class HtmlInput extends HtmlSingleTag implements HtmlFormElement {
         setType(type);
     }
 
+    public HtmlInput(String type, String name) {
+        this(type);
+        addAttribute("name", name);
+    }
+
     public final void setType(String type) {
         addAttribute("type", type);
     }
