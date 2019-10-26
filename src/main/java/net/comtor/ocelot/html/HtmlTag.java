@@ -69,8 +69,7 @@ public abstract class HtmlTag implements IHtmlTag {
     }
 
     @Override
-
-    public IHtmlTag addClass(String myClass) {
+    final public IHtmlTag addClass(String myClass) {
         if (tagClass.length() > 0) {
             this.tagClass += " ";
         }

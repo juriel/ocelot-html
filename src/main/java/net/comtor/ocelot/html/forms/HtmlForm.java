@@ -8,16 +8,12 @@ import net.comtor.ocelot.html.HtmlDoubleTag;
  */
 public class HtmlForm extends HtmlDoubleTag {
 
-
     public HtmlForm() {
         super("form");
     }
 
     public HtmlForm(String name) {
         this();
-        addAttribute("name", name);
-       
+        addAttribute("name", name);       
     }
-
-
 }
