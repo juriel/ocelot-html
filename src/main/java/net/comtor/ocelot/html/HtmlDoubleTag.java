@@ -88,4 +88,15 @@ public class HtmlDoubleTag extends HtmlTag implements IHtmlContainer {
         return new StringBuilder(container.getHtml());
     }
 
+    @Override
+    public IHtmlContainer put(String id, HtmlObject obj) {
+        container.put(id, obj);
+        return this;
+    }
+
+    @Override
+    public HtmlObject get(String id) {
+        return container.get(id);
+    }
+
 }

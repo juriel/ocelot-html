@@ -25,5 +25,10 @@ public interface IHtmlContainer extends HtmlObject{
     public IHtmlContainer addFirst(HtmlObject child);
 
     public IHtmlContainer removeAll();
+    
+    
+    IHtmlContainer put(String id, HtmlObject obj) ;
+    
+    HtmlObject get(String id);
 
 }

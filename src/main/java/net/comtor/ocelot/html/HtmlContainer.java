@@ -1,5 +1,6 @@
 package net.comtor.ocelot.html;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,9 +11,11 @@ import java.util.List;
 public class HtmlContainer implements IHtmlContainer {
 
     LinkedList<HtmlObject> children;
+    LinkedHashMap<String, HtmlObject> map;
 
     public HtmlContainer() {
         children = new LinkedList<>();
+        map  = new LinkedHashMap<>();
     }
 
     final public IHtmlContainer add(HtmlObject child) {
@@ -103,6 +106,16 @@ public class HtmlContainer implements IHtmlContainer {
     public IHtmlContainer removeAll() {
         children = new LinkedList<>();
         return this;
+    }
+
+    public IHtmlContainer put(String id, HtmlObject obj) {
+        map.put(id, obj);
+        return this;
+    }
+
+    @Override
+    public HtmlObject get(String id) {
+        return map.get(id);
     }
 
 }

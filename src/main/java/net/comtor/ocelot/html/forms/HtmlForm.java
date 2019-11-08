@@ -1,38 +1,44 @@
 package net.comtor.ocelot.html.forms;
 
-import java.util.LinkedHashMap;
 import net.comtor.ocelot.html.HtmlDoubleTag;
 
 /**
- *
+ * @author juriel
+ * @author juandiego
  * @author Guido A. Cafiel Vellojin
  */
 public class HtmlForm extends HtmlDoubleTag {
 
-    private LinkedHashMap<String, HtmlFormElement> formElements;
+    public static final String METHOD_POST = "POST";
+    public static final String METHOD_GET = "GET";
+    public static final String ENCTYPE_MULTIPART_FORM_DATA = "multipart/form-data";
 
     public HtmlForm() {
         super("form");
-
-        formElements = new LinkedHashMap<>();
     }
 
     public HtmlForm(String name) {
         this();
-
         addAttribute("name", name);
     }
 
-    public LinkedHashMap<String, HtmlFormElement> getFormElements() {
-        return formElements;
+    public void setAction(String action) {
+        addAttribute("action", action);
     }
 
-    public void setFormElements(LinkedHashMap<String, HtmlFormElement> formElements) {
-        this.formElements = formElements;
+    public String getAction() {
+        return getAttribute("action");
     }
 
-    public void addFormElement(String key, HtmlFormElement value) {
-        formElements.put(key, value);
+    public void setName(String name) {
+        addAttribute("name", name);
     }
 
+    public String getName() {
+        return getAttribute("name");
+    }
+
+    public void setEnctType(String encType) {
+        addAttribute("enctype", encType);
+    }
 }
