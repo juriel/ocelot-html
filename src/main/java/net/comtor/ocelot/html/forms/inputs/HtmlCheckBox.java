@@ -14,17 +14,20 @@ public class HtmlCheckBox extends HtmlInput {
 
     public HtmlCheckBox(boolean checked) {
         super(HtmlInput.CHECKBOX);
+
         this.checked = checked;
     }
 
     public HtmlCheckBox checked() {
         addAttribute("checked", "checked");
+
         return this;
     }
 
     @Override
     protected void preHtmlRender() {
         super.preHtmlRender();
+
         if (checked) {
             addAttribute("checked", "checked");
         }

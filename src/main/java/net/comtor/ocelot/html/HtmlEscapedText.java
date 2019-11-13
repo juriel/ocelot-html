@@ -18,16 +18,17 @@ public class HtmlEscapedText implements HtmlObject {
         return text;
     }
 
-    final public HtmlEscapedText setText(String str) {
+    public final HtmlEscapedText setText(String str) {
         this.text = str;
+
         if (text != null) {
             text = StringUtils.replace(text, "&", "&amp;");
             text = StringUtils.replace(text, "<", "&lt;");
             text = StringUtils.replace(text, ">", "&gt;");
             text = StringUtils.replace(text, "\"", "&quot;");
             text = StringUtils.replace(text, "'", "&#39;");
-
         }
+
         return this;
     }
 

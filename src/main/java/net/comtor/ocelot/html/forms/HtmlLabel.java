@@ -15,7 +15,9 @@ public class HtmlLabel extends HtmlDoubleTag {
 
     public HtmlLabel(String forInput, String text) {
         this();
+
         addAttribute("for", forInput);
+
         addEscapedText(text);
     }
 
@@ -25,6 +27,7 @@ public class HtmlLabel extends HtmlDoubleTag {
 
     public void setForInput(String forInput) {
         forInput = StringUtils.replace(forInput, ".", "_");
+
         addAttribute("for", forInput);
     }
 
