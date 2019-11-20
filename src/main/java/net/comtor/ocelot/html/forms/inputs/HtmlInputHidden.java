@@ -14,6 +14,7 @@ public class HtmlInputHidden extends HtmlInput {
 
     public HtmlInputHidden(String name, String value) {
         super(HtmlInput.HIDDEN);
+
         if (name != null) {
             setName(name);
         }
@@ -21,17 +22,18 @@ public class HtmlInputHidden extends HtmlInput {
         if (value != null) {
             super.setValue(value);
         }
-
     }
 
     @Override
     public HtmlFormElement setValue(String value) {
         addAttribute("value", value);
+
         return this;
     }
 
     public HtmlInputHidden addNoReset() {
         addAttribute("no-reset", "no-reset");
+
         return this;
     }
 

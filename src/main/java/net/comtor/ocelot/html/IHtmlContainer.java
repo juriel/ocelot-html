@@ -4,17 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 
+ *
  * @author juriel
  */
-public interface IHtmlContainer extends HtmlObject{
+public interface IHtmlContainer extends HtmlObject {
 
     HtmlObject getFirst();
 
     public LinkedList<HtmlObject> getContentObjects();
 
     public HtmlObject getElementById(String id);
-
 
     public IHtmlContainer add(HtmlObject child);
 
@@ -25,10 +24,8 @@ public interface IHtmlContainer extends HtmlObject{
     public IHtmlContainer addFirst(HtmlObject child);
 
     public IHtmlContainer removeAll();
-    
-    
-    IHtmlContainer put(String id, HtmlObject obj) ;
-    
-    HtmlObject get(String id);
 
+    IHtmlContainer put(String id, HtmlObject obj);
+
+    HtmlObject get(String id);
 }

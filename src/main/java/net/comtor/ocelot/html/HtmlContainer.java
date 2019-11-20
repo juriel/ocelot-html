@@ -20,7 +20,7 @@ public class HtmlContainer implements IHtmlContainer {
 
     final public IHtmlContainer add(HtmlObject child) {
         children.add(child);
-        
+
         return this;
     }
 
@@ -28,7 +28,7 @@ public class HtmlContainer implements IHtmlContainer {
         for (HtmlObject htmlObject : children) {
             add(htmlObject);
         }
-        
+
         return this;
     }
 
@@ -49,7 +49,7 @@ public class HtmlContainer implements IHtmlContainer {
     @Override
     final public String getHtml() {
         preHtmlRender();
-        
+
         StringBuilder sb = new StringBuilder();
 
         for (HtmlObject htmlObject : children) {
@@ -68,7 +68,6 @@ public class HtmlContainer implements IHtmlContainer {
 
     @Override
     public HtmlObject getElementById(String id) {
-
         for (HtmlObject cc : children) {
             if (cc instanceof IHtmlTag) {
                 IHtmlTag child = (IHtmlTag) cc;
@@ -85,7 +84,6 @@ public class HtmlContainer implements IHtmlContainer {
                 if (resp != null) {
                     return resp;
                 }
-
             }
         }
 

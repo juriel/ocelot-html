@@ -11,17 +11,16 @@ public interface HtmlAdministrableForm extends IHtmlContainer {
 
     public HtmlAdministrableForm addInputHidden(String name, String value);
 
-    public HtmlAdministrableForm addField(String id, String label, HtmlFormElement input,String help, String error);
-    
+    public HtmlAdministrableForm addField(String id, String label, HtmlFormElement input, String help, String error);
+
     public HtmlAdministrableForm addField(String label, HtmlFormElement input, String help, String error);
 
     public HtmlAdministrableForm addField(String label, HtmlFormElement input, String help);
-    
+
     public HtmlAdministrableForm addField(String label, HtmlFormElement input);  // Esta saca el id del name del HtmlFormElement
-    
+
     //public <INPUT extends HtmlFormElement> HtmlAdministrableForm addField(INPUT input);
-    public  HtmlAdministrableForm addField(LabelInputHelpError input);
-    
+    public HtmlAdministrableForm addField(LabelInputHelpError input);
 
     HtmlFormElement getInput(String name);  // En este caso el name del input es el id con el que se indexó
 
