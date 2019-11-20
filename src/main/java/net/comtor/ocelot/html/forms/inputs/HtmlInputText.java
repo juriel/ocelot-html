@@ -10,4 +10,15 @@ public class HtmlInputText extends HtmlInput {
         super(HtmlInput.TEXT);
     }
 
+    public HtmlInputText(String name, String id) {
+        this();
+
+        setName(name);
+        setId(id);
+    }
+
+    public HtmlInputText(String id) {
+        this("", id);
+    }
+
 }

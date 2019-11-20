@@ -15,11 +15,12 @@ public class HtmlContainer implements IHtmlContainer {
 
     public HtmlContainer() {
         children = new LinkedList<>();
-        map  = new LinkedHashMap<>();
+        map = new LinkedHashMap<>();
     }
 
     final public IHtmlContainer add(HtmlObject child) {
         children.add(child);
+        
         return this;
     }
 
@@ -27,6 +28,7 @@ public class HtmlContainer implements IHtmlContainer {
         for (HtmlObject htmlObject : children) {
             add(htmlObject);
         }
+        
         return this;
     }
 
@@ -47,15 +49,19 @@ public class HtmlContainer implements IHtmlContainer {
     @Override
     final public String getHtml() {
         preHtmlRender();
+        
         StringBuilder sb = new StringBuilder();
+
         for (HtmlObject htmlObject : children) {
             sb.append(htmlObject.getHtml());
         }
+
         return sb.toString();
     }
 
     public IHtmlContainer addAll(List<HtmlObject> asList) {
         children.addAll(asList);
+
         return this;
 
     }
@@ -66,34 +72,31 @@ public class HtmlContainer implements IHtmlContainer {
         for (HtmlObject cc : children) {
             if (cc instanceof IHtmlTag) {
                 IHtmlTag child = (IHtmlTag) cc;
-                if (child.getId() != null && child.getId().equals(id)) {
+
+                if ((child.getId() != null) && child.getId().equals(id)) {
                     return child;
                 }
             }
+
             if (cc instanceof IHtmlContainer) {
                 IHtmlContainer child = (IHtmlContainer) cc;
                 HtmlObject resp = child.getElementById(id);
+
                 if (resp != null) {
                     return resp;
                 }
 
             }
-
-//                if (!child.getContentObjects().isEmpty()) {
-//                    HtmlObject target = child.getElementById(id);
-//                    if (target != null) {
-//                        return target;
-//                    }
-//                }
         }
+
         return null;
 
     }
 
-
     @Override
     public IHtmlContainer addFirst(HtmlObject htmlObject) {
         children.addFirst(htmlObject);
+
         return this;
     }
 
@@ -105,11 +108,13 @@ public class HtmlContainer implements IHtmlContainer {
     @Override
     public IHtmlContainer removeAll() {
         children = new LinkedList<>();
+
         return this;
     }
 
     public IHtmlContainer put(String id, HtmlObject obj) {
         map.put(id, obj);
+
         return this;
     }
 

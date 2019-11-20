@@ -14,20 +14,20 @@ public abstract class AbstractHtmlAdministrableFormElement extends HtmlForm impl
     public HtmlAdministrableForm addInputHidden(String name, String value) {
         HtmlInputHidden input = new HtmlInputHidden(name, value);
         add(input);
+
         return this;
     }
 
     @Override
     public HtmlAdministrableForm addField(String label, HtmlFormElement input, String help, String error) {
         String id = input.getName();
+
         return this.addField(id, label, input, help, error);
-        
     }
 
     @Override
     public HtmlAdministrableForm addField(String label, HtmlFormElement input, String help) {
         return this.addField(label, input, help, null);
-
     }
 
     @Override
@@ -43,8 +43,10 @@ public abstract class AbstractHtmlAdministrableFormElement extends HtmlForm impl
     @Override
     public HtmlAdministrableForm addField(LabelInputHelpError input) {
         add(input);
+
         String id = input.getId();
         put(id, input);
+
         return this;
     }
 }
