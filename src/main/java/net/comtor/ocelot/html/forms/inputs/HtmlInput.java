@@ -107,7 +107,7 @@ public class HtmlInput extends HtmlSingleTag implements HtmlFormElement {
     }
 
     @Override
-    public HtmlFormElement setName(String name) {
+    final public HtmlFormElement setName(String name) {
         addAttribute("name", name);
 
         return this;
