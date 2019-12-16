@@ -17,6 +17,7 @@ public class HtmlInputHidden extends HtmlInput {
 
         if (name != null) {
             setName(name);
+            setId(name);
         }
 
         if (value != null) {
