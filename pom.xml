@@ -17,4 +17,5 @@
             <version>1.4</version>
         </dependency>
     </dependencies>
+    <name>ocelot-html-2</name>
 </project>
