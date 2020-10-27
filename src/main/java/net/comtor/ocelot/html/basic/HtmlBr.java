@@ -12,5 +12,4 @@ public class HtmlBr extends HtmlSingleTag {
         super("br");
     }
 
-
 }
