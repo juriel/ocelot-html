@@ -23,4 +23,10 @@ public class HtmlA extends HtmlDoubleTag {
         addEscapedText(label);
     }
 
+    public HtmlA addHref(String href) {
+        addAttribute("href", href);
+
+        return this;
+    }
+
 }

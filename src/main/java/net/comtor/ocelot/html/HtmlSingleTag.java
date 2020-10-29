@@ -9,7 +9,7 @@ package net.comtor.ocelot.html;
 public abstract class HtmlSingleTag extends HtmlTag {
 
     public HtmlSingleTag(String tagName) {
-        super(tagName,true);
+        super(tagName, true);
     }
 
 }
